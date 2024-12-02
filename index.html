@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Route Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="welcome-modal" id="welcome-modal">
+        <div class="modal-content">
+            <h2>Welcome to Eco Route Finder</h2>
+            <p>Plan eco-friendly journeys and reduce your carbon footprint.</p>
+            <button class="modern-button" onclick="closeModal()">Get Started</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Eco Route Finder</h1>
+        <div class="form-group">
+            <select id="language-selector" class="modern-select" onchange="setLanguage()">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+            </select>
+
+            <input type="text" id="locationA" class="modern-input" placeholder="Starting Location">
+            <input type="text" id="locationB" class="modern-input" placeholder="Destination">
+            <button class="modern-button" onclick="calculateRoute()">Find Route</button>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
